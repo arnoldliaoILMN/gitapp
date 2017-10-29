@@ -1,9 +1,8 @@
 #!/bin/bash
-source /var.conf
+source /variables.txt
 echo hi
-echo 10:33pm
-echo finding genomes
-find /genomes -name "*"
+echo it is 2pm
+
 echo project_dir is $project_dir
 for i in ` find /data/input "*.vcf*"; 
 do 
