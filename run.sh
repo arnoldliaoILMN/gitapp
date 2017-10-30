@@ -17,7 +17,7 @@ for i in ${vcf[@]}
 do 
   filename=`basename $i`
   new_filename=`echo $filename |sed -e "s/vcf/filtered.vcf/"`
-  perl /root/gitapp/filter_SM_from_vcf.pl $i $project_dir/$filename
+  perl /root/gitapp/filter_SM_from_vcf.pl $i $project_dir/$new_filename
 done
 
 echo done
