@@ -12,15 +12,14 @@ echo listing root gitapp
 ls /root
 ls /root/gitapp
 
-
+ls /root/gitapp/filter_SM_from_vcf.pl
 for i in ${vcf[@]}
 do 
   filename=`basename $i`
   new_filename=`echo $filename |sed -e "s/vcf/filtered.vcf/"`
+  echo perl /root/gitapp/filter_SM_from_vcf.pl $i $project_dir/$new_filename
   perl /root/gitapp/filter_SM_from_vcf.pl $i $project_dir/$new_filename
 done
 
 echo done
-echo looking at /data/input
 
-find /data -name "*"
