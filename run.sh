@@ -13,6 +13,7 @@ ls /root
 ls /root/gitapp
 
 ls /root/gitapp/filter_SM_from_vcf.pl
+cd /root/gitapp
 for i in ${vcf[@]}
 do 
   filename=`basename $i`
