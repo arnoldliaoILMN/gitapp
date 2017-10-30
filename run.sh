@@ -6,7 +6,7 @@ echo hi
 echo it is 945am
 echo project_dir is $project_dir
 
-vcf=`find /data/input "*.vcf"`
+vcf=`find /data/input -name "*.vcf"`
 echo found vcf ${vcf[@]}
 echo listing root gitapp
 ls /root
