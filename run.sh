@@ -19,3 +19,8 @@ do
   new_filename=`echo $filename |sed -e "s/vcf/filtered.vcf/"`
   perl /root/gitapp/filter_SM_from_vcf.pl $i $project_dir/$filename
 done
+
+echo done
+echo looking at /data/input
+
+find /data -name "*"
