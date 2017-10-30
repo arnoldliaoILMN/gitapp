@@ -18,8 +18,8 @@ for i in ${vcf[@]}
 do 
   filename=`basename $i`
   new_filename=`echo $filename |sed -e "s/vcf/filtered.vcf/"`
-  echo perl /root/gitapp/filter_SM_from_vcf.pl $i $project_dir/$new_filename
-  perl /root/gitapp/filter_SM_from_vcf.pl $i $project_dir/$new_filename
+  #echo perl /root/gitapp/filter_SM_from_vcf.pl $i $project_dir/$new_filename
+  zcat $i | perl /root/gitapp/filter_SM_from_vcf.pl - $project_dir/$new_filename
 done
 
 echo done
