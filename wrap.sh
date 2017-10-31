@@ -1,5 +1,5 @@
-source /variables.txt 
 vcfgz=$1
+project_dir=/scratch/parsed
 echo project_dir is $project_dir
 echo vcfgz is $vcfgz
 filename=`basename $vcfgz|sed -e "s/vcf.gz/vcf/"`
@@ -14,7 +14,7 @@ ls /root/gitapp
 zcat $vcfgz > $project_dir/$filename
 perl /root/gitapp/filter_SM_from_vcf.pl $project_dir/$filename $project_dir/$new_filename
 
-echo looking at project dir
+echo looking at project_dir $project_dir
 
 ls $project_dir
 
