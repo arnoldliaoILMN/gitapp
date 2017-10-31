@@ -16,7 +16,7 @@ chmod 777 /root/gitapp/wrap.sh
 # from https://stackoverflow.com/questions/38160/parallelize-bash-script-with-maximum-number-of-processes
 mkdir -p /data/scratch/parsed
 find /data/input -name "*.vcf.gz" | xargs --max-args=1 --max-procs=16 /root/gitapp/wrap.sh 
-
+bash /txtbox.sh
 mv /data/scratch/parsed $project_dir
 echo done
 
