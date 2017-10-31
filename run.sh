@@ -2,17 +2,14 @@
 source /variables.txt
 echo from git run.sh variables are
 cat /variables.txt
-echo hi
-echo it is 945am
-echo project_dir is $project_dir
+
+echo in run.sh project_dir is $project_dir
 
 vcf=`find /data/input -name "*.vcf.gz"`
 echo found vcf ${vcf[@]}
 echo listing root gitapp
-ls /root
 ls /root/gitapp
 
-ls /root/gitapp/filter_SM_from_vcf.pl
 cd /root/gitapp
 chmod 777 /root/gitapp/wrap.sh 
 # try this find . -name \*.pdf | xargs --max-args=1 --max-procs=$cpus  pdf2ps
