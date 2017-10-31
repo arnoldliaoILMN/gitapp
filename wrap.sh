@@ -1,5 +1,5 @@
 source /variables.txt 
-$vcfgz=$1
+vcfgz=$1
 echo project_dir is $project_dir
 echo vcfgz is $vcfgz
 filename=`basename $vcfgz|sed -e "s/vcf.gz/filtered.vcf/"`
