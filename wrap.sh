@@ -1,5 +1,5 @@
 vcfgz=$1
-project_dir=/scratch/parsed
+project_dir=/data/scratch/parsed
 echo project_dir is $project_dir
 echo vcfgz is $vcfgz
 filename=`basename $vcfgz|sed -e "s/vcf.gz/vcf/"`
