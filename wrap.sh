@@ -9,5 +9,5 @@ echo looking at where I am and files
 pwd
 ls /root/gitapp
 
-zcat $vcfgz | perl /gitapp/filter_SM_from_vcf.pl - $project_dir/$filename
+zcat $vcfgz | perl /root/gitapp/filter_SM_from_vcf.pl - $project_dir/$filename
 
