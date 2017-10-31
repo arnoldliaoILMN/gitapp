@@ -9,7 +9,7 @@ echo filename is $filename
 
 cd /root/gitapp
 pwd
-zcat $vcfgz |perl /root/gitapp/filter_SM_from_vcf.pl - $project_dir/$filename
+time zcat $vcfgz |perl /root/gitapp/filter_SM_from_vcf.pl - $project_dir/$filename
 
 echo looking at project_dir $project_dir
 ls $project_dir
