@@ -27,6 +27,6 @@ do
   zcat $i | perl /root/gitapp/filter_SM_from_vcf.pl - $project_dir/$new_filename
 done
 COMMENT
-
+mv /scratch/parsed $project_dir
 echo done
 
