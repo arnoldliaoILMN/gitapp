@@ -1,4 +1,5 @@
 vcfgz=$1
+IFS=$(echo -en "\n\b")
 project_dir=/data/scratch/parsed
 echo project_dir is $project_dir
 echo vcfgz is $vcfgz
