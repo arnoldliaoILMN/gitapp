@@ -7,7 +7,7 @@ echo in run.sh project_dir is $project_dir
 
 vcf=`find /data/input -name "*somatic.vcf.gz"`
 echo found vcf ${vcf[@]}
-
+IFS=$(echo -en "\n\b")
 cd /root/gitapp
 chmod 777 /root/gitapp/wrap.sh 
 # try this find . -name \*.pdf | xargs --max-args=1 --max-procs=$cpus  pdf2ps
