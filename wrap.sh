@@ -12,6 +12,11 @@ zcat $vcfgz |perl /root/gitapp/filter_SM_from_vcf.pl - $temp_dir/$filename
 #echo looking at project_dir $project_dir
 #ls $project_dir
 ## need to include code here to bgzip and tabix vcf files
+# for i in *vcf; do echo working on $i;/illumina/thirdparty/tabix/tabix-0.2.6/bgzip $i; 
+#/illumina/thirdparty/tabix/tabix-0.2.6/tabix -f -p vcf ${i}.gz; done
+# tabix in /opt/tabix-0.2.6
+/opt/tabix-0.2.6/bgzip $temp_dir/$filename
+/opt/tabix-0.2.6/tabix -f -p vcf $temp_dir/${filename}.gz
 
 
 
