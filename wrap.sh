@@ -1,18 +1,17 @@
 vcfgz=$1
 IFS=$(echo -en "\n\b")
-project_dir=/data/scratch/parsed
-echo project_dir is $project_dir
-echo vcfgz is $vcfgz
+temp_dir=/data/scratch/parsed
+#echo temp_dir is $temp_dir
+#echo vcfgz is $vcfgz
 filename=`basename $vcfgz|sed -e "s/vcf.gz/filtered.vcf/"`
-#new_filename=`echo $filename |sed -e "s/vcf/filtered.vcf/"`
-echo filename is $filename
 #echo new_filename $new_filename
 
 cd /root/gitapp
-pwd
-zcat $vcfgz |perl /root/gitapp/filter_SM_from_vcf.pl - $project_dir/$filename
+zcat $vcfgz |perl /root/gitapp/filter_SM_from_vcf.pl - $temp_dir/$filename
+# debug below.  comment out when done
+#echo looking at project_dir $project_dir
+#ls $project_dir
+## need to include code here to bgzip and tabix vcf files
 
-echo looking at project_dir $project_dir
-ls $project_dir
 
 
