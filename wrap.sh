@@ -3,7 +3,7 @@ IFS=$(echo -en "\n\b")
 temp_dir=/data/scratch/parsed
 #echo temp_dir is $temp_dir
 #echo vcfgz is $vcfgz
-filename=`basename $vcfgz|sed -e "s/vcf.gz/filtered.vcf/"`
+filename=`basename $vcfgz|sed -e "s/vcf.gz/${RANDOM}_filtered.vcf/"`
 #echo new_filename $new_filename
 
 cd /root/gitapp
@@ -20,3 +20,4 @@ zcat $vcfgz |perl /root/gitapp/filter_SM_from_vcf.pl - $temp_dir/$filename
 
 
 
+    
