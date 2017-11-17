@@ -9,8 +9,8 @@ source /variables.txt
 echo in run.sh project_dir is $project_dir
 
 # input vcf.gz on BSSH are in /data/input, so we do a search and put it in an array
-vcf=`find /data/input -name "*somatic.vcf.gz"`
-echo found vcf ${vcf[@]}
+vcf=`find /data/input -name "*somatic.SV.vcf*"`
+echo found sv vcf ${vcf[@]}
 
 # we already cloned gitapp in the docker image python script /run.py
 # we need to run wrap.sh in /root/gitapp
