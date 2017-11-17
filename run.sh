@@ -23,9 +23,10 @@ chmod 777 /root/gitapp/wrap.sh
 mkdir -p /data/scratch/parsed
 mkdir -p /data/scratch/SV
 #find /data/input -name "*somatic.vcf.gz" | xargs -d '\n' --max-args=1 --max-procs=16 /root/gitapp/wrap.sh 
-find /data/input -name "*somatic.SV.vcf.gz*" | xargs -d '\n' --max-args=1 -I '{}' --max-procs=16 cp /data/scratch/SV 
+find /data/input -name "*"
+find /data/input -name "*somatic.SV.vcf*" | xargs -d '\n' --max-args=1 -I '{}' --max-procs=16 cp /data/scratch/SV 
 # now we run whatever command is in txtbox from the input form
-bash /txtbox.sh
+#bash /txtbox.sh
 #mv /data/scratch/parsed $project_dir
 mv /data/scratch/SV $project_dir
 echo done run.sh
