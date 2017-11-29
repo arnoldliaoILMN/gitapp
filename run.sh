@@ -28,6 +28,7 @@ find /data/input -name "*somatic.SV.vcf*" | xargs -d '\n' --max-args=1 -I '{}' -
 # now we run whatever command is in txtbox from the input form
 #bash /txtbox.sh
 #mv /data/scratch/parsed $project_dir
-mv /data/scratch/SV $project_dir
+#mv /data/scratch/SV $project_dir
+cp -rf /genomes $project_dir
 echo done run.sh
 
