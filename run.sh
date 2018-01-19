@@ -29,6 +29,8 @@ find /data/input -name "*somatic.SV.vcf*" | xargs -d '\n' --max-args=1 -I '{}' -
 #bash /txtbox.sh
 #mv /data/scratch/parsed $project_dir
 #mv /data/scratch/SV $project_dir
-cp -rf /genomes $project_dir
+#cp -rf /genomes $project_dir
+mkdir $project_dir
+find /genomes -name * > $project_dir/genomes.txt
 echo done run.sh
 
