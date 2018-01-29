@@ -22,16 +22,13 @@ chmod 777 /root/gitapp/wrap.sh
 # due to space in BSSH, we needed to use -d '\n' as space delimiter for xargs
 mkdir -p /data/scratch/parsed
 mkdir -p /data/scratch/SV
-#find /data/input -name "*somatic.vcf.gz" | xargs -d '\n' --max-args=1 --max-procs=16 /root/gitapp/wrap.sh 
-find /data/input -name "*"
-find /data/input -name "*somatic.SV.vcf*" | xargs -d '\n' --max-args=1 -I '{}' --max-procs=16 cp '{}' /data/scratch/SV 
+find /data/input -name "*somatic.vcf.gz" | xargs -d '\n' --max-args=1 --max-procs=16 /root/gitapp/wrap.sh 
+#find /data/input -name "*"
+find /data/input -name "*somatic.SV.vcf.gz" | xargs -d '\n' --max-args=1 -I '{}' --max-procs=16 cp '{}' /data/scratch/SV 
 # now we run whatever command is in txtbox from the input form
 #bash /txtbox.sh
 #mv /data/scratch/parsed $project_dir
 #mv /data/scratch/SV $project_dir
 mkdir $project_dir
-cp -rf /genomes/Homo_sapiens/NCBI/GRCh38 $project_dir
-
-#find /genomes -name * > $project_dir/genomes.txt
 echo done run.sh
 
