@@ -30,5 +30,7 @@ find /data/input -name "*somatic.SV.vcf.gz" | xargs -d '\n' --max-args=1 -I '{}'
 #mv /data/scratch/parsed $project_dir
 #mv /data/scratch/SV $project_dir
 mkdir $project_dir
+mv /data/scratch/SV $project_dir
+mv /data/scratch/parsed $project_dir
 echo done run.sh
 
